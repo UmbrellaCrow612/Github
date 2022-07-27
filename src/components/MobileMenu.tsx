@@ -11,7 +11,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = () => {
     <button
       className="cursor-pointer p-1 flex items-center justify-center group focus:opacity-60 shadow-md"
       onClick={() => setOpenDrawer(!openDrawer)}
-      onKeyDown={ () => setOpenDrawer(!openDrawer)}
+      onKeyDown={() => setOpenDrawer(!openDrawer)}
     >
       <GiHamburgerMenu className="text-[#F0F6FC] text-3xl group-hover:opacity-50" />
     </button>

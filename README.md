@@ -49,7 +49,6 @@ npx prisma migrate dev
 
 - [redirect feat](https://www.youtube.com/watch?v=VP-RCddbjrc)
 
-
 # How to push changes
 
 - Push changes to development
