@@ -40,7 +40,7 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = () => {
 
 const DrawerOption: React.FC<DrawerOptionProps> = ({ option }) => {
   return (
-    <Link href={`/${option}`}>
+    <Link href={`/${option.toLowerCase()}`}>
       <a>
         <div className="border-t-[0.4px] text-md flex items-center h-[40px] cursor-pointer group border-[#3A3D43]">
           <h6 className="group-hover:opacity-90 transition-all ease-in-out text-[#F0F6FC] group-hover:text-[#BABBBD] font-medium tracking-wide">
