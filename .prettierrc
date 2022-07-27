@@ -1,0 +1,20 @@
+{
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "importOrder": [
+    "^(next/(.*)$)|^(next$)",
+    "^(next-auth/(.*)$)|^(next-auth$)",
+    "^(next-themes/(.*)$)|^(next-themes$)",
+    "<THIRD_PARTY_MODULES>",
+    "next-seo.config",
+    "^layouts/(.*)$",
+    "^components/(.*)$",
+    "^styles/(.*)$",
+    "^lib/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
