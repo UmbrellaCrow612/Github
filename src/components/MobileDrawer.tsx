@@ -1,6 +1,7 @@
 import { useRecoilValue } from 'recoil'
 
 import { mobileDrawerState } from '../../atoms'
+import { SearchInput } from './SearchInput'
 
 interface MobileDrawerProps {}
 
@@ -8,11 +9,16 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = () => {
   const showDrawer = useRecoilValue(mobileDrawerState)
   return (
     <div
-      className={`transition-all ease-in-out duration-300 ${
-        showDrawer ? 'h-[300px] scale-y-100 flex' : 'h-[0px] scale-y-0'
+      className={`${
+        showDrawer
+          ? 'h-[500px] scale-y-100 flex bg-[#161B22] border px-3 py-2 text-[#BABBBD]'
+          : 'hidden'
       }`}
     >
-      Mobile Drawer
+      {/** Search Input */}
+      <div className='w-full h-[45px] flex items-center justify-center'>
+        <SearchInput />
+      </div>
     </div>
   )
 }
