@@ -48,3 +48,9 @@ npx prisma migrate dev
 # Mentions
 
 - [redirect feat](https://www.youtube.com/watch?v=VP-RCddbjrc)
+
+# How to push changes
+
+- Push changes to development
+- Once a feature in dev in done push it to feature
+- Then from feature push to main
