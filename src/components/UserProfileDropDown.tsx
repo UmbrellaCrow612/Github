@@ -25,7 +25,7 @@ export const UserProfileDropDown: React.FC<UserProfileDropDownProps> = () => {
       </button>
       {/** parent click away */}
       <div
-        className={`absolute bg-[#161c25] top-10 -left-40 w-[185px] rounded-md z-10 border border-[#30363D] shadow-xl h-[400px] py-2 px-3 ${
+        className={`absolute bg-[#161c25] hidden top-10 -left-40 w-[185px] rounded-md z-10 border border-[#30363D] shadow-xl h-[400px] py-2 px-3 ${
           openMenu ? 'md:block' : 'md:hidden'
         }`}
       >
