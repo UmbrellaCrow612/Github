@@ -9,7 +9,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = () => {
   const [openDrawer, setOpenDrawer] = useRecoilState(mobileDrawerState)
   return (
     <button
-      className="cursor-pointer p-1 flex items-center justify-center group focus:opacity-60 shadow-md"
+      className="flex items-center justify-center p-1 shadow-md cursor-pointer group focus:opacity-60 md:hidden"
       onClick={() => setOpenDrawer(!openDrawer)}
       onKeyDown={() => setOpenDrawer(!openDrawer)}
     >

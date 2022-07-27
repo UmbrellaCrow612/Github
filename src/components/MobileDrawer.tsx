@@ -21,7 +21,7 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = () => {
     <div
       className={`${
         showDrawer
-          ? 'h-[470px] scale-y-100 flex bg-[#161B22] px-3 py-2 flex-col'
+          ? 'h-[470px] scale-y-100 flex bg-[#161B22] px-3 py-2 flex-col md:hidden'
           : 'hidden'
       }`}
     >
