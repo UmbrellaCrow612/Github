@@ -15,7 +15,7 @@ export const Navigation: React.FC<NavigationProps> = () => {
         {/** Logo */}
         <Link href="/">
           <a>
-            <div className="bg-[#F0F6FC] rounded-full border flex items-center justify-center cursor-pointer">
+            <div className="bg-[#F0F6FC] rounded-full border flex items-center justify-center cursor-pointer hover:scale-110 transition-all">
               <img src="/images/logo.png" alt="GitHub" className="w-[45px]" />
             </div>
           </a>

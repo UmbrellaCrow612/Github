@@ -4,8 +4,8 @@ interface MobileMenuProps {}
 
 export const MobileMenu: React.FC<MobileMenuProps> = () => {
   return (
-    <div className="cursor-pointer p-1 flex items-center justify-center">
-      <GiHamburgerMenu className="text-[#F0F6FC] text-2xl" />
+    <div className="cursor-pointer p-1 flex items-center justify-center group">
+      <GiHamburgerMenu className="text-[#F0F6FC] text-2xl group-hover:opacity-50" />
     </div>
   )
 }
