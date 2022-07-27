@@ -1,9 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from 'next/link'
+import Link from 'next/link';
 
-import { MobileMenu } from './MobileMenu'
-import { NavigationGroup } from './NavagationGroup'
-import { SearchInput } from './SearchInput'
+
+
+import { MobileMenu } from './MobileMenu';
+import { NavigationGroup } from './NavagationGroup';
+import { SearchInput } from './SearchInput';
+
 
 interface NavigationProps {}
 
@@ -37,7 +40,7 @@ export const Navigation: React.FC<NavigationProps> = () => {
 
           <div className="ml-1 w-[290px] hidden md:flex items-center justify-between px-3">
             {Options.map((option) => (
-              <Link href={`${option.href}`} key={option.title}>
+              <Link href={`/${option.href}`} key={option.title}>
                 <a>
                   <h6 className="text-[#f9f9f9] hover:opacity-50 tracking-wide font-normal cursor-pointer">
                     {option.title}
@@ -60,18 +63,18 @@ const Options: {
 }[] = [
   {
     title: 'Pulls',
-    href: '/',
+    href: 'Pulls',
   },
   {
     title: 'Issues',
-    href: '/',
+    href: 'Issues',
   },
   {
     title: 'Marketplace',
-    href: '/',
+    href: 'Marketplace',
   },
   {
     title: 'Explore',
-    href: '/',
+    href: 'Explore',
   },
 ]
