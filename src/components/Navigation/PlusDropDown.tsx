@@ -21,8 +21,8 @@ export const PlusDropDown: React.FC<PlusDropDownProps> = () => {
       {/** Menu */}
 
       <div
-        className={`absolute bg-[#161B22] -left-48 top-7 w-[200px] border-[0.5px] border-[#30363D] shadow-xl h-[190px] rounded-sm flex-col z-10 ${
-          open ? 'flex' : 'hidden'
+        className={`absolute bg-[#161B22] -left-48 top-7 w-[200px] border-[0.5px] border-[#30363D] shadow-xl hidden h-[190px] rounded-sm flex-col z-10 ${
+          open ? 'md:flex' : 'md:hidden'
         }`}
       >
         {MenuItems.map((Option) => (
