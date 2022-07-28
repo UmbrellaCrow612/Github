@@ -2,7 +2,6 @@
 import Link from 'next/link'
 
 import { useState } from 'react'
-import { BsEmojiSmile } from 'react-icons/bs'
 import { MdExpandMore } from 'react-icons/md'
 
 interface UserProfileDropDownProps {}
@@ -20,7 +19,7 @@ export const UserProfileDropDown: React.FC<UserProfileDropDownProps> = () => {
           src="/images/logo.png"
           alt="user profile"
           loading="lazy"
-          className="w-[20px] h-[20px]"
+          className="w-[20px]"
         />
         <MdExpandMore className="text-[#F0F6FC] text-md group-hover:opacity-50" />
       </button>
@@ -42,15 +41,6 @@ export const UserProfileDropDown: React.FC<UserProfileDropDownProps> = () => {
             </div>
           </a>
         </Link>
-
-        {/** Set status */}
-
-        <div className="border-t-[0.5px] border-b-[0.5px] h-[45px] flex items-center justify-center border-[#393f47] mt-2">
-          <button className="flex items-center justify-start border-[0.5px] py-1 w-[150px] px-2 rounded-md border-[#31383f] shadow-md group bg-[#1a2028]">
-            <BsEmojiSmile className="mr-2 text-sm text-gray-500 group-hover:text-blue-500" />
-            <p className="text-sm text-gray-500 font-base group-hover:text-blue-500">Set status</p>
-          </button>
-        </div>
       </div>
     </div>
   )

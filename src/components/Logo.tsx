@@ -11,7 +11,7 @@ export const Logo: React.FC<LogoProps> = () => {
           <img
             src="/images/logo.png"
             alt="GitHub"
-            className="w-[45px] h-[45px] md:w-[35px] md:h-[35px]"
+            className="w-[45px] md:w-[35px]"
           />
         </div>
       </a>

@@ -52,5 +52,5 @@ npx prisma migrate dev
 # How to push changes
 
 - Push changes to development
-- From dev to main
-- Feature is where you build new stuff
+- Once a feature in dev in done push it to feature
+- Then from feature push to main
