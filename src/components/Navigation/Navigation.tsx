@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { Logo } from '../Logo'
 import { SearchInput } from '../SearchInput'
-import { MobileMenuHandler } from '../Mobile'
+import { MobileMenuHandler } from '../MobileView'
 import { NavigationGroup } from './NavigationGroup'
 
 interface NavigationProps {}
