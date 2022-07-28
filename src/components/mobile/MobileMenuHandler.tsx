@@ -1,11 +1,11 @@
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { useRecoilState } from 'recoil'
 
-import { mobileDrawerState } from '../../atoms'
+import { mobileDrawerState } from '../../../atoms'
 
-interface MobileMenuProps {}
+interface MobileMenuHandlerProps {}
 
-export const MobileMenu: React.FC<MobileMenuProps> = () => {
+export const MobileMenuHandler: React.FC<MobileMenuHandlerProps> = () => {
   const [openDrawer, setOpenDrawer] = useRecoilState(mobileDrawerState)
   return (
     <button

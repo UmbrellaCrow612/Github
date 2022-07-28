@@ -1,43 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from 'next/link';
+import Link from 'next/link'
 
-
-
-import { MobileMenu } from './MobileMenu';
-import { NavigationGroup } from './NavagationGroup';
-import { SearchInput } from './SearchInput';
-
+import { Logo } from '../Logo'
+import { SearchInput } from '../SearchInput'
+import { MobileMenuHandler } from '../mobile'
+import { NavigationGroup } from './NavigationGroup'
 
 interface NavigationProps {}
 
 export const Navigation: React.FC<NavigationProps> = () => {
   return (
     <header>
-      <nav className="max-w-screen-2xl mx-auto h-[85px] flex items-center justify-between px-3 bg-[#161B22] md:h-[75px] sticky top-0 z-10">
-        <MobileMenu />
+      <nav className="max-w-screen-2xl mx-auto h-[85px] flex items-center justify-between px-3 bg-[#161B22] md:h-[70px] sticky top-0 z-10">
+        <MobileMenuHandler />
 
-        {/** Left side */}
+        {/** ====== Left side ====== */}
+
         <div className="flex items-center p-1">
-          {/** Logo */}
-          <Link href="/">
-            <a>
-              <div className="bg-[#F0F6FC] rounded-full border flex items-center justify-center cursor-pointer hover:scale-110 transition-all">
-                <img
-                  src="/images/logo.png"
-                  alt="GitHub"
-                  className="w-[45px] md:w-[35px]"
-                />
-              </div>
-            </a>
-          </Link>
-
+          <Logo />
           {/** md view */}
           <div className="h-[30px] w-[300px] ml-2 hidden md:block">
             <SearchInput />
           </div>
 
           {/** Options */}
-
           <div className="ml-1 w-[290px] hidden md:flex items-center justify-between px-3">
             {Options.map((option) => (
               <Link href={`/${option.href}`} key={option.title}>
@@ -49,9 +35,16 @@ export const Navigation: React.FC<NavigationProps> = () => {
               </Link>
             ))}
           </div>
+          {/** Options end*/}
         </div>
 
+        {/** ====== Left side ends ======*/}
+
+        {/** ====== right side ======*/}
+
         <NavigationGroup />
+
+        {/** ====== right side ends ======*/}
       </nav>
     </header>
   )

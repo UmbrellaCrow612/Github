@@ -23,15 +23,15 @@ export const UserProfileDropDown: React.FC<UserProfileDropDownProps> = () => {
         />
         <MdExpandMore className="text-[#F0F6FC] text-md group-hover:opacity-50" />
       </button>
-      {/** parent click away */}
+      {/** Menu */}
       <div
-        className={`absolute bg-[#161c25] hidden top-10 -left-40 w-[185px] rounded-md z-10 border border-[#30363D] shadow-xl h-[400px] py-2 px-3 ${
+        className={`absolute bg-[#161c25] hidden top-10 -left-40 w-[185px] rounded-md z-10 border border-[#30363D] shadow-xl h-[400px] ${
           openMenu ? 'md:block' : 'md:hidden'
         }`}
       >
         <Link href="/">
           <a>
-            <div className="h-[50px]">
+            <div className="h-[50px] py-2 px-3">
               <h6 className="text-sm text-[#fcfcfc] tracking-wide mb-1">
                 Signed in as
               </h6>

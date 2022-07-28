@@ -4,10 +4,11 @@ import Link from 'next/link'
 import { FiLogOut } from 'react-icons/fi'
 import { useRecoilValue } from 'recoil'
 
-import { mobileDrawerState } from '../../atoms'
-import { SearchInput } from './SearchInput'
+import { mobileDrawerState } from '../../../atoms'
+import { SearchInput } from '../SearchInput'
 
 interface MobileDrawerProps {}
+
 interface DrawerOptionProps {
   option: string
   href: string
