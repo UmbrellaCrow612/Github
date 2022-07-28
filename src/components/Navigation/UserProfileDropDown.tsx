@@ -100,7 +100,7 @@ export const UserProfileDropDown: React.FC<UserProfileDropDownProps> = () => {
   )
 }
 
-const MenuOption: React.FC<MenuOptionProps> = ({
+export const MenuOption: React.FC<MenuOptionProps> = ({
   title,
   href,
   borderBottom,
