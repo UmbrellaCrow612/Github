@@ -8,7 +8,7 @@ export interface DropDownOptions {
 }
 export const UnAuthMenuList: React.FC<UnAuthMenuListProps> = () => {
   return (
-    <div className="flex items-center justify-between p-1 ml-2 w-[520px]">
+    <div className="hidden xl:flex items-center justify-between p-1 ml-2 w-[520px]">
       {UnAuthMenuListOptions.map((Option) => (
         <MenuDropDown
           title={Option.title}
