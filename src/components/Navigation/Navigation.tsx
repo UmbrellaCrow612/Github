@@ -1,50 +1,66 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 
+import { useSession } from 'next-auth/react'
+
 import { Logo } from '../Logo'
-import { SearchInput } from '../SearchInput'
 import { MobileMenuHandler } from '../MobileView'
+import { SearchInput } from '../SearchInput'
 import { NavigationGroup } from './NavigationGroup'
+import { AuthActions, UnAuthMobileMenuHandler } from './authentication'
 
 interface NavigationProps {}
 
 export const Navigation: React.FC<NavigationProps> = () => {
+  const { data: session } = useSession()
   return (
     <header>
       <nav className="max-w-screen-2xl mx-auto h-[85px] flex items-center justify-between px-3 bg-[#161B22] md:h-[70px] sticky top-0 z-10">
-        <MobileMenuHandler />
+        {session ? (
+          <>
+            <MobileMenuHandler />
 
-        {/** ====== Left side ====== */}
+            {/** ====== Left side ====== */}
 
-        <div className="flex items-center p-1">
-          <Logo />
-          {/** md view */}
-          <div className="h-[30px] w-[300px] ml-2 hidden md:block">
-            <SearchInput />
-          </div>
+            <div className="flex items-center p-1">
+              <Logo />
+              {/** md view */}
+              <div className="h-[30px] w-[300px] ml-2 hidden md:block">
+                <SearchInput />
+              </div>
 
-          {/** Options */}
-          <div className="ml-1 w-[290px] hidden md:flex items-center justify-between px-3">
-            {Options.map((option) => (
-              <Link href={`/${option.href}`} key={option.title}>
-                <a>
-                  <h6 className="text-[#f9f9f9] hover:opacity-50 tracking-wide font-normal cursor-pointer">
-                    {option.title}
-                  </h6>
-                </a>
-              </Link>
-            ))}
-          </div>
-          {/** Options end*/}
-        </div>
+              {/** Options */}
+              <div className="ml-1 w-[290px] hidden md:flex items-center justify-between px-3">
+                {Options.map((option) => (
+                  <Link href={`/${option.href}`} key={option.title}>
+                    <a>
+                      <h6 className="text-[#f9f9f9] hover:opacity-50 tracking-wide font-normal cursor-pointer">
+                        {option.title}
+                      </h6>
+                    </a>
+                  </Link>
+                ))}
+              </div>
+              {/** Options end*/}
+            </div>
 
-        {/** ====== Left side ends ======*/}
+            {/** ====== Left side ends ======*/}
 
-        {/** ====== right side ======*/}
+            {/** ====== right side ======*/}
 
-        <NavigationGroup />
+            <NavigationGroup />
 
-        {/** ====== right side ends ======*/}
+            {/** ====== right side ends ======*/}
+          </>
+        ) : (
+          <>
+            <Logo />
+            <div className='flex items-center p-2'>
+              <AuthActions />
+              <UnAuthMobileMenuHandler />
+            </div>
+          </>
+        )}
       </nav>
     </header>
   )
