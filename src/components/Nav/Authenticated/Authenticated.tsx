@@ -1,8 +1,7 @@
 import { Logo } from 'components/Logo'
 import { SearchInput } from 'components/SearchInput'
 
-import { authNavOptions } from '../values/authNavOptions'
-import { HeaderOption } from './HeaderOption'
+import { HeaderOptions } from './HeaderOptions'
 import { MobileMenu } from './MobileMenu'
 import { Notification } from './Notification'
 import { PlusDropDown } from './PlusDropDown'
@@ -23,15 +22,7 @@ export const Authenticated: React.FC<AuthenticatedProps> = () => {
           <div className="h-[30px] w-[300px] ml-2 hidden md:block">
             <SearchInput />
           </div>
-          <div className="ml-1 w-[290px] hidden md:flex items-center justify-between px-3">
-            {authNavOptions.map((option) => (
-              <HeaderOption
-                href={option.href}
-                title={option.title}
-                key={option.title}
-              />
-            ))}
-          </div>
+          <HeaderOptions />
         </div>
 
         {/** Left side ends*/}

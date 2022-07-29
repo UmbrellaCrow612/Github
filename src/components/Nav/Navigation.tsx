@@ -9,5 +9,3 @@ export const Navigation: React.FC<NavigationProps> = () => {
   const { data: session } = useSession()
   return <>{session ? <Authenticated /> : <UnAuthenticated />}</>
 }
-
-//
