@@ -58,10 +58,15 @@ export const Navigation: React.FC<NavigationProps> = () => {
           </>
         ) : (
           <>
-            <div className="flex items-center p-2 border">
+            {/** ====== Left side ======= */}
+
+            <div className="flex items-center p-2">
               <Logo />
               <UnAuthMenuList />
             </div>
+            {/** ====== Left side ends ======= */}
+
+            {/** ====== right side  ======= */}
 
             <div className="flex items-center p-2">
               <div className="h-[40px] w-[250px] ml-2 hidden md:block">
@@ -70,6 +75,8 @@ export const Navigation: React.FC<NavigationProps> = () => {
               <AuthActions />
               <UnAuthMobileMenuHandler />
             </div>
+
+            {/** ====== right side ends ======= */}
           </>
         )}
       </nav>
