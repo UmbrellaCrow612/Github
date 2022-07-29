@@ -54,8 +54,14 @@ export const Navigation: React.FC<NavigationProps> = () => {
           </>
         ) : (
           <>
-            <Logo />
-            <div className='flex items-center p-2'>
+            <div className="border">
+              <Logo />
+            </div>
+
+            <div className="flex items-center p-2">
+              <div className="h-[40px] w-[250px] ml-2 hidden md:block">
+                <SearchInput />
+              </div>
               <AuthActions />
               <UnAuthMobileMenuHandler />
             </div>
