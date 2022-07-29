@@ -7,7 +7,11 @@ import { Logo } from '../Logo'
 import { MobileMenuHandler } from '../MobileView'
 import { SearchInput } from '../SearchInput'
 import { NavigationGroup } from './NavigationGroup'
-import { AuthActions, UnAuthMobileMenuHandler } from './authentication'
+import {
+  AuthActions,
+  UnAuthMenuList,
+  UnAuthMobileMenuHandler,
+} from './authentication'
 
 interface NavigationProps {}
 
@@ -54,8 +58,9 @@ export const Navigation: React.FC<NavigationProps> = () => {
           </>
         ) : (
           <>
-            <div className="border">
+            <div className="flex items-center p-2 border">
               <Logo />
+              <UnAuthMenuList />
             </div>
 
             <div className="flex items-center p-2">
