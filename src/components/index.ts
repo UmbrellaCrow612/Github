@@ -1,4 +1,4 @@
 export { Footer } from './Footer'
-export { Navigation } from './Navigation'
-export { MobileDrawer } from './MobileView'
+export { Navigation, UnAuthNavigation } from './Navigation'
+export { MobileDrawer } from './Mobile'
 export { SEO } from './SEO'

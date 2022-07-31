@@ -1,4 +1,6 @@
-import { Footer, MobileDrawer, Navigation } from 'components'
+import { Footer, MobileDrawer } from 'components'
+
+import { Navigation } from '../components/Nav'
 
 interface GlobalLayoutProps {
   children: React.ReactNode
