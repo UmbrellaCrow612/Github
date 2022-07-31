@@ -1,8 +1,8 @@
-interface DropDownOptions {
+export interface DropDownOptions {
   title: string
   href: string
   bold?: boolean
-  borderBottom?:boolean
+  borderBottom?: boolean
 }
 
 export const UnAuthMenuListOptions: {
@@ -19,7 +19,7 @@ export const UnAuthMenuListOptions: {
       {
         title: 'Features',
         href: 'features',
-        bold:true
+        bold: true,
       },
       {
         title: 'Mobile',
@@ -60,7 +60,17 @@ export const UnAuthMenuListOptions: {
       {
         title: 'Integrations',
         href: 'integrations',
-        borderBottom:true
+        borderBottom: true,
+      },
+      {
+        title: 'GitHub Sponsors',
+        href: '',
+        bold: true,
+      },
+      {
+        title: 'Customer stories',
+        href: '',
+        bold: true,
       },
     ],
   },

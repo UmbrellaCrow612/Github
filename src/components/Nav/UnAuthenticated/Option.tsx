@@ -3,11 +3,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { MdExpandMore } from 'react-icons/md'
 
-interface DropDownOptions {
-  title: string
-  href: string
-  bold?: boolean
-}
+import { DropDownOptions } from '../values/UnAuthMenuListOptions'
 
 interface OptionProps {
   title: string
@@ -43,9 +39,10 @@ export const Option: React.FC<OptionProps> = ({
           </a>
         </Link>
       </div>
+      {/** Menu Optional*/}
       {isDropDown ? (
         <div
-          className={`absolute shadow-xl border-[0.5px] border-gray-700 bg-[#1c2229] rounded-md w-[320px] h-[500px] flex-col items-start ${
+          className={`absolute shadow-xl border-[0.5px] border-gray-700 bg-[#1c2229] rounded-md w-[300px] h-[520px] flex-col items-start ${
             open ? 'flex' : 'hidden'
           }`}
         >
@@ -53,8 +50,12 @@ export const Option: React.FC<OptionProps> = ({
             {DropDownOptions?.map((Option) => (
               <button
                 key={Option.title}
-                className={`w-full p-1 mb-1 text-start hover:text-blue-600 text-[#8B959E] ${
+                className={`w-full p-1 mb-1 text-start  hover:text-blue-600 text-[#8B959E] ${
                   Option.bold ? 'font-semibold text-[#C8D2D9]' : 'font-normal'
+                }  ${
+                  Option.borderBottom
+                    ? 'border-b-[0.5px] border-y-gray-700'
+                    : ''
                 }`}
               >
                 {Option.title}
