@@ -1,14 +1,12 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-
-
-import { useState } from "react";
-import { MdExpandMore } from "react-icons/md";
-
+import { useState } from 'react'
+import { MdExpandMore } from 'react-icons/md'
 
 interface DropDownOptions {
   title: string
   href: string
+  bold?: boolean
 }
 
 interface OptionProps {
@@ -46,8 +44,23 @@ export const Option: React.FC<OptionProps> = ({
         </Link>
       </div>
       {isDropDown ? (
-        <div className={`absolute bg-white ${open ? 'flex' : 'hidden'}`}>
-          Hello
+        <div
+          className={`absolute shadow-xl border-[0.5px] border-gray-700 bg-[#1c2229] rounded-md w-[320px] h-[500px] flex-col items-start ${
+            open ? 'flex' : 'hidden'
+          }`}
+        >
+          <div className="px-6 mt-9">
+            {DropDownOptions?.map((Option) => (
+              <button
+                key={Option.title}
+                className={`w-full p-1 mb-1 text-start hover:text-blue-600 text-[#8B959E] ${
+                  Option.bold ? 'font-semibold text-[#C8D2D9]' : 'font-normal'
+                }`}
+              >
+                {Option.title}
+              </button>
+            ))}
+          </div>
         </div>
       ) : (
         <></>

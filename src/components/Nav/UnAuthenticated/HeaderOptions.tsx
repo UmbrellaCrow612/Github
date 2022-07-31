@@ -1,6 +1,5 @@
 import { UnAuthMenuListOptions } from '../values/UnAuthMenuListOptions'
-import { Option } from './Option';
-
+import { Option } from './Option'
 
 interface HeaderOptionsProps {}
 

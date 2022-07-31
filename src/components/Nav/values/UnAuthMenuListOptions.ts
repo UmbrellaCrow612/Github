@@ -1,6 +1,8 @@
 interface DropDownOptions {
   title: string
   href: string
+  bold?: boolean
+  borderBottom?:boolean
 }
 
 export const UnAuthMenuListOptions: {
@@ -17,6 +19,7 @@ export const UnAuthMenuListOptions: {
       {
         title: 'Features',
         href: 'features',
+        bold:true
       },
       {
         title: 'Mobile',
@@ -57,6 +60,7 @@ export const UnAuthMenuListOptions: {
       {
         title: 'Integrations',
         href: 'integrations',
+        borderBottom:true
       },
     ],
   },
