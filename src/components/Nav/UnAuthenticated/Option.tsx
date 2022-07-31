@@ -42,7 +42,7 @@ export const Option: React.FC<OptionProps> = ({
       {/** Menu Optional*/}
       {isDropDown ? (
         <div
-          className={`absolute shadow-xl border-[0.5px] border-gray-700 bg-[#1c2229] rounded-md w-[300px] h-[520px] flex-col items-start ${
+          className={`absolute shadow-xl border-[0.5px] border-gray-700 bg-[#1c2229] rounded-md w-[300px] flex-col items-start ${
             open ? 'flex' : 'hidden'
           }`}
         >
