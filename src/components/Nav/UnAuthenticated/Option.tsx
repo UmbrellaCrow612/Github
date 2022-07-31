@@ -46,7 +46,7 @@ export const Option: React.FC<OptionProps> = ({
             open ? 'flex' : 'hidden'
           }`}
         >
-          <div className="px-6 mt-9">
+          <div className="px-6 mb-4 mt-9">
             {DropDownOptions?.map((Option) => (
               <button
                 key={Option.title}
@@ -56,7 +56,7 @@ export const Option: React.FC<OptionProps> = ({
                   Option.borderBottom
                     ? 'border-b-[0.5px] border-y-gray-700'
                     : ''
-                }`}
+                }  ${Option.borderTop ? 'border-t-[0.5px] border-y-gray-700' : ''}`}
               >
                 {Option.title}
               </button>
