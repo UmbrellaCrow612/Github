@@ -1,10 +1,10 @@
 import { useRecoilValue } from 'recoil'
 
 import { UnAuthMobileOption } from 'components/Nav/UnAuthenticated/UnAuthMobileOption'
+import { SearchInput } from 'components/SearchInput'
 
 import { unAuthMobileDrawerState } from '../../../atoms'
 import { UnAuthMenuListOptions } from '../Nav/values/UnAuthMenuListOptions'
-import { SearchInput } from 'components/SearchInput'
 
 interface UnAuthMobileDrawerProps {}
 
@@ -28,9 +28,15 @@ export const UnAuthMobileDrawer: React.FC<UnAuthMobileDrawerProps> = () => {
         />
       ))}
 
-      <div className='mt-4 h-[50px]'>
+      <div className="mt-4 h-[50px]">
         <SearchInput />
       </div>
+
+      {/** Custom sign in button */}
+
+      <button className="bg-[#161B22] h-[50px] mt-4 mb-2 rounded-sm shadow-xl text-[#d1cdcd] text-xl tracking-wide border-[0.5px] border-gray-600">
+        Sign in
+      </button>
     </div>
   )
 }
