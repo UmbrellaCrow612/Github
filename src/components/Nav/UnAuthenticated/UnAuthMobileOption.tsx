@@ -20,7 +20,9 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
   return (
     <div className="relative">
       <button
-        className="mb-1 w-full p-3 group cursor-pointer text-start  border-b-[0.5px] border-gray-700 flex items-center"
+        className={`mb-1 w-full p-3 group cursor-pointer text-start  border-b-[0.5px] border-gray-700 flex items-center ${
+          open ? '-z-10' : ''
+        }`}
         onClick={() => setOpen(!open)}
       >
         <h5 className="group-hover:text-[#575A62] text-[#d2d4d8] text-xl tracking-wide">
@@ -37,12 +39,19 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
           <div
             className={`${
               open
-                ? 'bg-[#1d2228] rounded-md shadow-xl absolute top-10 w-[300px] z-10'
+                ? 'bg-[#1d2228] rounded-md p-2 shadow-xl absolute top-10 w-[300px] z-20'
                 : 'hidden'
             }`}
             key={100}
           >
-            hello
+            {DropDownOptions?.map((Option) => (
+              <button
+                className={`w-full p-2 text-gray-300 text-start hover:text-gray-400 ${Option.bold ? "font-bold" : ""} ${Option.borderBottom ? "border-b-[0.5px] border-gray-600" : ""}`}
+                key={Option.title}
+              >
+                {Option.title}
+              </button>
+            ))}
           </div>
         ) : (
           <></>
