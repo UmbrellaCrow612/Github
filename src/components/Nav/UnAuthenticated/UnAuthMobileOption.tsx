@@ -42,7 +42,18 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
             }`}
             key={100}
           >
-            hello
+            {DropDownOptions?.map((Option) => (
+              <button
+                className={`w-full p-2 text-gray-300 text-start hover:text-gray-400 ${
+                  Option.bold ? 'font-bold' : ''
+                } ${
+                  Option.borderBottom ? 'border-b-[0.5px] border-gray-600' : ''
+                }`}
+                key={Option.title}
+              >
+                {Option.title}
+              </button>
+            ))}
           </div>
         ) : (
           <></>
