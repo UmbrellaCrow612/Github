@@ -2,7 +2,7 @@ import { useSession } from 'next-auth/react'
 
 import { Footer, MobileDrawer, UnAuthMobileDrawer } from 'components'
 
-import { Navigation } from '../components/Nav'
+import { Navigation } from '../components'
 
 interface GlobalLayoutProps {
   children: React.ReactNode
