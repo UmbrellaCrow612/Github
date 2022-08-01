@@ -20,7 +20,7 @@ export const Option: React.FC<OptionProps> = ({
 }) => {
   const [open, setOpen] = useState(false)
   return (
-    <div className="" key={title}>
+    <div key={title}>
       <div className="relative">
         <Link href={`/${href}`}>
           <a>
@@ -56,13 +56,25 @@ export const Option: React.FC<OptionProps> = ({
                   Option.borderBottom
                     ? 'border-b-[0.5px] border-y-gray-700'
                     : ''
-                }  ${Option.borderTop ? 'border-t-[0.5px] border-y-gray-700' : ''}`}
+                }  ${
+                  Option.borderTop ? 'border-t-[0.5px] border-y-gray-700' : ''
+                }`}
               >
                 {Option.title}
               </button>
             ))}
           </div>
         </div>
+      ) : (
+        <></>
+      )}
+
+      {/** Click away listener */}
+      {open ? (
+        <div
+          className="fixed top-0 left-0 w-full h-full -z-10"
+          onClick={() => setOpen(!open)}
+        />
       ) : (
         <></>
       )}
