@@ -1,4 +1,6 @@
-import { Footer, MobileDrawer } from 'components'
+import { useSession } from 'next-auth/react'
+
+import { Footer, MobileDrawer, UnAuthMobileDrawer } from 'components'
 
 import { Navigation } from '../components/Nav'
 
@@ -7,10 +9,11 @@ interface GlobalLayoutProps {
 }
 
 export const GlobalLayout: React.FC<GlobalLayoutProps> = ({ children }) => {
+  const { data: session } = useSession()
   return (
     <>
       <Navigation />
-      <MobileDrawer />
+      {session ? <MobileDrawer /> : <UnAuthMobileDrawer />}
       <main>{children}</main>
       <Footer />
     </>
