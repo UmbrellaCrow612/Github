@@ -7,7 +7,7 @@ interface UnAuthMobileDrawerProps {}
 export const UnAuthMobileDrawer: React.FC<UnAuthMobileDrawerProps> = () => {
   const openUnAuthDrawer = useRecoilValue(unAuthMobileDrawerState)
   return (
-    <div className={`${openUnAuthDrawer ? 'flex bg-white' : 'hidden'}`}>
+    <div className={`${openUnAuthDrawer ? 'flex bg-white md:hidden' : 'hidden'}`}>
       Un Auth
     </div>
   )
