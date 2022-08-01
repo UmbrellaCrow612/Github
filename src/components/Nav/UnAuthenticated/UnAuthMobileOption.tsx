@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { MdExpandMore } from 'react-icons/md'
 
 import { DropDownOptions } from '../values/UnAuthMenuListOptions'
@@ -17,6 +17,14 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
   DropDownOptions,
 }) => {
   const [open, setOpen] = useState(false)
+  useEffect(() => {
+    setLoading(false)
+  }, [])
+
+  const [loading, setLoading] = useState(true)
+
+  if (loading) return <h1>Loading</h1>
+
   return (
     <div className="relative">
       <button
