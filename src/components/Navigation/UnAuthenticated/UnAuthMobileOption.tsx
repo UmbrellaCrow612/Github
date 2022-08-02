@@ -17,11 +17,11 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
   DropDownOptions,
 }) => {
   const [open, setOpen] = useState(false)
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
     setLoading(false)
   }, [])
 
-  const [loading, setLoading] = useState(true)
 
   if (loading) return <h1>Loading</h1>
 
@@ -39,8 +39,8 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
         ) : (
           <></>
         )}
-
-        {/** Is dropdown and will show menu */}
+      </button>
+       {/** Is dropdown and will show menu */}
         {isDropDown ? (
           <div
             className={`${
@@ -66,7 +66,14 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
         ) : (
           <></>
         )}
-      </button>
+
+
+        {/** Click away listener */}
+        {open ? (
+          <div className="fixed w-full h-full -z-10" onClick={() => setOpen(!open)}/>
+        ): (
+          <></>
+        )}
     </div>
   )
 }
