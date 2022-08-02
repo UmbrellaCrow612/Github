@@ -11,8 +11,8 @@ interface AuthenticatedProps {}
 
 export const Authenticated: React.FC<AuthenticatedProps> = () => {
   return (
-    <header>
-      <nav className="max-w-screen-2xl mx-auto h-[85px] flex items-center justify-between px-3 bg-[#161B22] md:h-[70px] sticky top-0 z-10">
+    <header className="w-full bg-[#161B22]">
+      <nav className="max-w-screen-2xl mx-auto h-[85px] flex items-center justify-between px-3  md:h-[70px] sticky top-0 z-10">
         <MobileMenu />
 
         {/** Left side */}
