@@ -10,7 +10,7 @@ interface UnAuthenticatedProps {}
 export const UnAuthenticated: React.FC<UnAuthenticatedProps> = () => {
   return (
     <header className="w-full bg-[#161B22]">
-      <nav className="max-w-screen-2xl mx-auto h-[85px] flex items-center justify-between px-3  md:h-[70px]">
+      <nav className="max-w-screen-xl mx-auto h-[85px] flex items-center justify-between px-3  md:h-[70px]">
         <div className="flex items-center p-2">
           <Logo />
           <HeaderOptions />

@@ -3,11 +3,17 @@ import Head from 'next/head'
 
 const home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
-        <title>home</title>
+        <title>GitHub: Where the world builds software · GitHub</title>
+        <meta
+          name="description"
+          content="GitHub is where over 83 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories, ..."
+        />
+        <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
       </Head>
-    </div>
+      Hello world
+    </>
   )
 }
 export default home
