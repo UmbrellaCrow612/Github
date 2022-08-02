@@ -14,7 +14,7 @@ export const UnAuthMobileDrawer: React.FC<UnAuthMobileDrawerProps> = () => {
     <div
       className={`${
         openUnAuthDrawer
-          ? 'flex flex-col px-4 bg-[#0D1116] transition-all p-1 border-[0.5px] border-[#30363D] shadow-xl  md:hidden'
+          ? 'flex flex-col px-4 bg-[#0D1116] transition-all p-1 border-[0.5px] border-[#30363D] shadow-xl  md:hidden -z-10'
           : 'hidden'
       }`}
     >
