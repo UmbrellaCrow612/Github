@@ -1,5 +1,5 @@
-import { PlusDropDownOptions } from "../values/PlusDropDownOptions"
-import { MenuOption } from "./MenuOption"
+import { PlusDropDownOptions } from '../values/PlusDropDownOptions'
+import { MenuOption } from './MenuOption'
 
 interface PlusDropDownMenuProps {
   open: boolean

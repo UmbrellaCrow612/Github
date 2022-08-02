@@ -1,7 +1,15 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
-const home: NextPage = () => {
+import { useEffect } from 'react'
+
+const Home: NextPage = () => {
+  const router = useRouter()
+
+  useEffect(() => {
+    router.replace('/home', '/', { shallow: true })
+  }, [router])
   return (
     <>
       <Head>
@@ -16,4 +24,4 @@ const home: NextPage = () => {
     </>
   )
 }
-export default home
+export default Home
