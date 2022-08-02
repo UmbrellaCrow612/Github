@@ -10,8 +10,8 @@ const home: NextPage = () => {
           name="description"
           content="GitHub is where over 83 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories, ..."
         />
+        <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
       </Head>
-
       Hello world
     </>
   )

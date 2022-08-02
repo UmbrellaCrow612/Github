@@ -48,6 +48,8 @@ npx prisma migrate dev
 # Mentions
 
 - [redirect feat](https://www.youtube.com/watch?v=VP-RCddbjrc)
+- [Favicon cheat sheet](https://github.com/UmbrellaCrow612/favicon-cheat-sheet)
+- [Used favicon](https://www.iconfinder.com/icons/291716/github_logo_social_network_social_icon)
 
 # How to push changes
 
