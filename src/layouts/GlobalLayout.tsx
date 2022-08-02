@@ -1,10 +1,6 @@
 import { useSession } from 'next-auth/react'
 
-import {
-  Footer,
-  MobileDrawer,
-  UnAuthMobileDrawer,
-} from 'components'
+import { Footer, MobileDrawer, UnAuthMobileDrawer } from 'components'
 
 import { Navigation } from '../components'
 

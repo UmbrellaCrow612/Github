@@ -1,5 +1,5 @@
-import { authNavOptions } from "../values/authNavOptions"
-import { HeaderOption } from "./HeaderOption"
+import { authNavOptions } from '../values/authNavOptions'
+import { HeaderOption } from './HeaderOption'
 
 interface HeaderOptionsProps {}
 

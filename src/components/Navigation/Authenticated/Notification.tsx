@@ -1,4 +1,4 @@
-import { IoIosNotificationsOutline } from "react-icons/io"
+import { IoIosNotificationsOutline } from 'react-icons/io'
 
 interface NotificationProps {}
 
