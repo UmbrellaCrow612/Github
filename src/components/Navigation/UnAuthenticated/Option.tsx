@@ -48,20 +48,28 @@ export const Option: React.FC<OptionProps> = ({
         >
           <div className="px-6 mb-4 mt-9">
             {DropDownOptions?.map((Option) => (
-              <button
-                key={Option.title}
-                className={`w-full p-1 mb-1 text-start  hover:text-blue-600 text-[#8B959E] ${
-                  Option.bold ? 'font-semibold text-[#C8D2D9]' : 'font-normal'
-                }  ${
-                  Option.borderBottom
-                    ? 'border-b-[0.5px] border-y-gray-700'
-                    : ''
-                }  ${
-                  Option.borderTop ? 'border-t-[0.5px] border-y-gray-700' : ''
-                }`}
-              >
-                {Option.title}
-              </button>
+              <Link href={`/${Option.href}`} key={Option.title}>
+                <a>
+                  <button
+                    key={Option.title}
+                    className={`w-full p-1 mb-1 text-start  hover:text-blue-600 text-[#8B959E] ${
+                      Option.bold
+                        ? 'font-semibold text-[#C8D2D9]'
+                        : 'font-normal'
+                    }  ${
+                      Option.borderBottom
+                        ? 'border-b-[0.5px] border-y-gray-700'
+                        : ''
+                    }  ${
+                      Option.borderTop
+                        ? 'border-t-[0.5px] border-y-gray-700'
+                        : ''
+                    }`}
+                  >
+                    {Option.title}
+                  </button>
+                </a>
+              </Link>
             ))}
           </div>
         </div>
