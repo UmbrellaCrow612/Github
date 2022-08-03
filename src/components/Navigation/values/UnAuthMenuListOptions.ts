@@ -28,49 +28,49 @@ export const UnAuthMenuListOptions: {
       },
       {
         title: 'Actions',
-        href: 'actions',
+        href: 'features/actions',
       },
       {
         title: 'Codespaces',
-        href: 'codespaces',
+        href: 'features/codespaces',
       },
       {
         title: 'Copilot',
-        href: 'copilot',
+        href: 'features/copilot',
       },
       {
         title: 'Packages',
-        href: 'packages',
+        href: 'features/packages',
       },
       {
         title: 'Security',
-        href: 'security',
+        href: 'features/security',
       },
       {
         title: 'Code review',
-        href: 'review',
+        href: 'features/code-review',
       },
       {
         title: 'Issues',
-        href: 'Issues',
+        href: 'features/issues',
       },
       {
         title: 'Discussions',
-        href: 'discussions',
+        href: 'features/discussions',
       },
       {
         title: 'Integrations',
-        href: 'integrations',
+        href: 'features/integrations',
         borderBottom: true,
       },
       {
         title: 'GitHub Sponsors',
-        href: '',
+        href: 'sponsors',
         bold: true,
       },
       {
         title: 'Customer stories',
-        href: '',
+        href: 'customer-stories',
         bold: true,
       },
     ],
@@ -90,7 +90,7 @@ export const UnAuthMenuListOptions: {
     DropDownOptions: [
       {
         title: 'Explore GitHub',
-        href: '',
+        href: 'explore',
         bold: true,
         borderBottom: true,
       },
@@ -100,27 +100,27 @@ export const UnAuthMenuListOptions: {
       },
       {
         title: 'Topics',
-        href: '',
+        href: 'topics',
       },
       {
         title: 'Collections',
-        href: '',
+        href: 'collections',
       },
       {
         title: 'Trending',
-        href: '',
+        href: 'trending',
       },
       {
         title: 'Skills',
-        href: '',
+        href: 'skills',
       },
       {
         title: 'GitHub Sponsors',
-        href: '',
+        href: 'sponsors/explore',
       },
       {
         title: 'Open source guides',
-        href: '',
+        href: 'opensource',
       },
       {
         title: 'Connect with others',
@@ -128,23 +128,23 @@ export const UnAuthMenuListOptions: {
       },
       {
         title: 'The ReadME Project',
-        href: '',
+        href: 'readme',
       },
       {
         title: 'Events',
-        href: '',
+        href: 'events',
       },
       {
         title: 'Community forum',
-        href: '',
+        href: 'community',
       },
       {
         title: 'GitHub Education',
-        href: '',
+        href: 'education',
       },
       {
         title: 'GitHub Stars program',
-        href: '',
+        href: 'stars',
       },
     ],
   },
@@ -160,21 +160,21 @@ export const UnAuthMenuListOptions: {
     DropDownOptions: [
       {
         title: 'Plans',
-        href: '',
+        href: 'pricing',
         bold: true,
         borderBottom: true,
       },
       {
         title: 'Compare plans',
-        href: '',
+        href: 'pricing#compare-features',
       },
       {
         title: 'Contact Sales',
-        href: '',
+        href: 'enterprise/contact',
       },
       {
         title: 'Education',
-        href: '',
+        href: 'education',
         bold: true,
         borderTop: true,
       },

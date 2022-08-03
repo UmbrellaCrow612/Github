@@ -22,7 +22,6 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
     setLoading(false)
   }, [])
 
-
   if (loading) return <h1>Loading</h1>
 
   return (
@@ -40,40 +39,42 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
           <></>
         )}
       </button>
-       {/** Is dropdown and will show menu */}
-        {isDropDown ? (
-          <div
-            className={`${
-              open
-                ? 'bg-[#1d2228] rounded-md shadow-xl absolute top-10 w-[300px] z-10'
-                : 'hidden'
-            }`}
-            key={100}
-          >
-            {DropDownOptions?.map((Option) => (
-              <button
-                className={`w-full p-2 text-gray-300 text-start hover:text-gray-400 ${
-                  Option.bold ? 'font-bold' : ''
-                } ${
-                  Option.borderBottom ? 'border-b-[0.5px] border-gray-600' : ''
-                }`}
-                key={Option.title}
-              >
-                {Option.title}
-              </button>
-            ))}
-          </div>
-        ) : (
-          <></>
-        )}
+      {/** Is dropdown and will show menu */}
+      {isDropDown ? (
+        <div
+          className={`${
+            open
+              ? 'bg-[#1d2228] rounded-md shadow-xl absolute top-10 w-[300px] z-10'
+              : 'hidden'
+          }`}
+          key={100}
+        >
+          {DropDownOptions?.map((Option) => (
+            <button
+              className={`w-full p-2 text-gray-300 text-start hover:text-gray-400 ${
+                Option.bold ? 'font-bold' : ''
+              } ${
+                Option.borderBottom ? 'border-b-[0.5px] border-gray-600' : ''
+              }`}
+              key={Option.title}
+            >
+              {Option.title}
+            </button>
+          ))}
+        </div>
+      ) : (
+        <></>
+      )}
 
-
-        {/** Click away listener */}
-        {open ? (
-          <div className="fixed w-full h-full -z-10" onClick={() => setOpen(!open)}/>
-        ): (
-          <></>
-        )}
+      {/** Click away listener */}
+      {open ? (
+        <div
+          className="fixed w-full h-full -z-10"
+          onClick={() => setOpen(!open)}
+        />
+      ) : (
+        <></>
+      )}
     </div>
   )
 }
