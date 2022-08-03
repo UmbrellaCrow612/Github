@@ -24,10 +24,13 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
     setLoading(false)
   }, [])
 
+
+
   if (loading) return <h1>Loading</h1>
 
   return (
     <div className="relative">
+
       <Link href={`/${href}`} key={title}>
         <a>
           <button
@@ -46,6 +49,7 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
         </a>
       </Link>
 
+
       {/** Is dropdown and will show menu */}
       {isDropDown ? (
         <div
@@ -57,6 +61,7 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
           key={100}
         >
           {DropDownOptions?.map((Option) => (
+
             <Link href={`/${Option.href}`} key={Option.title}>
               <a>
                 <button
@@ -73,11 +78,13 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
                 </button>
               </a>
             </Link>
+
           ))}
         </div>
       ) : (
         <></>
       )}
+
 
       {/** Click away listener */}
       {open ? (
@@ -88,6 +95,7 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
       ) : (
         <></>
       )}
+
     </div>
   )
 }
