@@ -55,7 +55,7 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
         <div
           className={`${
             open
-              ? 'bg-[#1d2228] rounded-md shadow-xl absolute top-10 w-[300px] z-10'
+              ? 'bg-[#1d2228] rounded-md shadow-xl absolute top-10 w-[300px] z-20'
               : 'hidden'
           }`}
           key={100}
@@ -89,7 +89,7 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
       {/** Click away listener */}
       {open ? (
         <div
-          className="fixed w-full h-full -z-10"
+          className="fixed w-full h-full z-10 top-0 left-0"
           onClick={() => setOpen(!open)}
         />
       ) : (

@@ -42,7 +42,7 @@ export const Option: React.FC<OptionProps> = ({
       {/** Menu Optional*/}
       {isDropDown ? (
         <div
-          className={`absolute shadow-xl border-[0.5px] border-gray-700 bg-[#1c2229] rounded-md w-[300px] flex-col items-start ${
+          className={`absolute shadow-xl border-[0.5px] border-gray-700 bg-[#1c2229] rounded-md w-[300px] flex-col items-start z-20 ${
             open ? 'flex' : 'hidden'
           }`}
         >
@@ -80,7 +80,7 @@ export const Option: React.FC<OptionProps> = ({
       {/** Click away listener */}
       {open ? (
         <div
-          className="fixed top-0 left-0 w-full h-full -z-10"
+          className="fixed top-0 left-0 w-full h-full mt-[75px] z-10"
           onClick={() => setOpen(!open)}
           onMouseOver={() => setOpen(!open)}
         />
