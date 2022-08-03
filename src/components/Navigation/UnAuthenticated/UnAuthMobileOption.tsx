@@ -22,6 +22,8 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
     setLoading(false)
   }, [])
 
+
+
   if (loading) return <h1>Loading</h1>
 
   return (
@@ -39,6 +41,7 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
           <></>
         )}
       </button>
+
       {/** Is dropdown and will show menu */}
       {isDropDown ? (
         <div
@@ -75,6 +78,7 @@ export const UnAuthMobileOption: React.FC<UnAuthMobileOptionProps> = ({
       ) : (
         <></>
       )}
+
     </div>
   )
 }
