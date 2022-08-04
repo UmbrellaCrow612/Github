@@ -1,5 +1,7 @@
 # Steps to follow for prisma adaptor to work
 
+Update to 2.1
+
 1.) In `.env` paste the `DATABASE_URL=` from `railway` or `PlanetScale`
 
 2.) Run:
