@@ -5,6 +5,7 @@ import { SearchInput } from 'components/SearchInput'
 
 import { unAuthMobileDrawerState } from '../../../atoms'
 import { UnAuthMenuListOptions } from '../Navigation/values/UnAuthMenuListOptions'
+import { signIn } from 'next-auth/react'
 
 interface UnAuthMobileDrawerProps {}
 
@@ -34,7 +35,7 @@ export const UnAuthMobileDrawer: React.FC<UnAuthMobileDrawerProps> = () => {
 
       {/** Custom sign in button */}
 
-      <button className="bg-[#161B22] h-[50px] mt-4 mb-2 rounded-sm shadow-xl text-[#d1cdcd] text-xl tracking-wide border-[0.5px] border-gray-600">
+      <button className="bg-[#161B22] h-[50px] mt-4 mb-2 rounded-sm shadow-xl text-[#d1cdcd] text-xl tracking-wide border-[0.5px] border-gray-600" onClick={() => signIn()}>
         Sign in
       </button>
     </div>
