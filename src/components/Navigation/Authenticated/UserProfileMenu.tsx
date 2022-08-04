@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import { useSession } from 'next-auth/react'
+
 import { BsEmojiSmile } from 'react-icons/bs'
 
 import {
@@ -14,22 +16,23 @@ interface UserProfileMenuProps {
 }
 
 export const UserProfileMenu: React.FC<UserProfileMenuProps> = ({ open }) => {
+  const { data: session, status } = useSession()
+
+  if (status === 'loading') return <h1>loading</h1>
   return (
     <div
-      className={`absolute bg-[#161c25] hidden top-10 -left-40 w-[180px] rounded-md z-10 border border-[#30363D] shadow-xl h-[550px] ${
+      className={`absolute bg-[#161c25] hidden top-10 -left-40 w-[180px] rounded-md z-10 border border-[#30363D] shadow-xl  ${
         open ? 'md:block' : 'md:hidden'
       }`}
     >
       <Link href="/">
-        <a>
-          <div className="h-[50px] py-2 px-3">
-            <h6 className="text-sm text-[#fcfcfc] tracking-wide mb-1">
-              Signed in as
-            </h6>
-            <h5 className="text-base text-[#fcfcfc] tracking-wide">
-              Umbrella Man
-            </h5>
-          </div>
+        <a className="flex flex-col flex-wrap px-3 py-2 overflow-scroll">
+          <h6 className="text-sm text-[#fcfcfc] tracking-wide mb-1">
+            Sign in as
+          </h6>
+          <p className="text-base text-[#fcfcfc] tracking-wide max-w-[50px]">
+            {session?.user?.email || <h1>Null</h1>}
+          </p>
         </a>
       </Link>
 

@@ -66,6 +66,6 @@ export const UserProfileOptionsThree: {
 }[] = [
   {
     title: 'Sign out',
-    href: '',
+    href: '/api/auth/signout',
   },
 ]
