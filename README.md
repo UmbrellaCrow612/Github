@@ -1,28 +1,14 @@
 # Steps to follow for prisma adaptor to work
 
-Update to 2.1
+1.) get `DATABASE_URL` from planetScale
 
-1.) In `.env` paste the `DATABASE_URL=` from `railway` or `PlanetScale`
+2.) Configure the scheme for prisma 
 
-2.) Run:
+3.) run `npx prisma db push` to push the schema to planetScale
 
-```bash
-npx prisma migrate dev
-```
+4.) run `npx prisma studio` see if the data has been added and if the schema has been pushed
 
-This will create an SQL migration file and execute it.
 
-3.) Generate Client
-
-```bash
-npx prisma generate
-```
-
-4.) To configure your database to use the new schema (i.e. create tables and columns) use the prisma migrate command:
-
-```bash
-npx prisma migrate dev
-```
 
 # Steps to follow for Auth to work
 
