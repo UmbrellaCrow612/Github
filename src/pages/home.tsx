@@ -24,7 +24,7 @@ const Home: NextPage = () => {
       {/** First hero section */}
 
       <div className="w-full bg-[#0b0d11]">
-        <section className="grid h-[1000px] md:h-[700px] grid-cols-1 grid-rows-2 xl:grid-cols-2 xl:grid-rows-1 max-w-screen-2xl mx-auto ">
+        <section className="grid h-[1000px] md:h-[700px] grid-cols-1 grid-rows-2 xl:grid-cols-2 xl:grid-rows-1 max-w-screen-2xl mx-auto">
           {/** Grid 1 */}
           <div className="flex flex-col items-center justify-center text-center">
             <h4 className="text-4xl font-extrabold tracking-wide text-[#FFFFFF] mb-2 xl:text-5xl">
@@ -51,23 +51,53 @@ const Home: NextPage = () => {
           {/** Grid 2 */}
 
           <div className="flex flex-wrap items-center justify-between px-8 text-center">
-            <div className="p-2"> 
+            <div className="p-2">
               <p className="text-2xl text-white">83+ million</p>
               <span className="text-sm text-gray-300">Developers</span>
             </div>
-             <div className="p-2"> 
+            <div className="p-2">
               <p className="text-2xl text-white">4+ million</p>
               <span className="text-sm text-gray-300">Organizations</span>
             </div>
-            <div className="p-2"> 
+            <div className="p-2">
               <p className="text-2xl text-white">200+ million</p>
               <span className="text-sm text-gray-300">Repositories</span>
             </div>
-            <div className="p-2"> 
+            <div className="p-2">
               <p className="text-2xl text-white">90%</p>
               <span className="text-sm text-gray-300">Fortune 100</span>
             </div>
           </div>
+        </section>
+      </div>
+
+      {/** Second hero section */}
+
+      <div className="w-full px-10 h-[600px] flex items-center">
+        <section className="mx-auto  w-[700px] h-[400px] md:h-[300px] flex flex-col md:flex-row justify-between rounded-xl shadow-xl border-[0.5px] border-black bg-[#ffffff]">
+          {/** Top */}
+          <div className="py-2 px-3 text-xl font-extrabold text-center text-[#57616A]  md:w-[300px] md:flex md:flex-col md:items-center md:justify-center">
+            <h1>Build like the best with GitHub Enterprise</h1>
+            <p className="mt-3 text-sm font-thin">
+              Take collaboration to the next level with security and
+              administrative features built for teams.
+            </p>
+            {/*Buttons*/}
+            <div className="flex flex-col items-center p-3 mt-2">
+              <button className="text-base font-bold border-[0.5px] text-black tracking-wide px-6 rounded-md shadow-md mb-3 py-3 border-black hover:border-[1.5px] transition-all">
+                Start free trial
+              </button>
+              <button className="text-base font-bold border-[0.5px] text-black tracking-wide px-6 rounded-md shadow-md py-3 border-black hover:border-[1.5px] transition-all">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+
+          {/*Bottom*/}
+          <div
+            style={{ backgroundImage: 'url(/images/hero-banner-1.webp)' }}
+            className="h-[150px] md:h-full bg-contain bg-center md:bg-left-bottom rounded-xl md:w-[55%] bg-no-repeat"
+          />
         </section>
       </div>
     </>
