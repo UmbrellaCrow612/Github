@@ -46,7 +46,7 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = () => {
         <DrawerOption option="h" key={1} href="to user name" userOption />
 
         {/** Log out pass href as signOut from Next Auth*/}
-        <DrawerOption option="log out" key={10} href="signOut" logOut />
+        <DrawerOption option="log out" key={10} href="/api/auth/signout" logOut />
       </div>
     </div>
   )
