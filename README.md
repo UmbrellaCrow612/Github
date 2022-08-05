@@ -39,6 +39,7 @@
 - [Favicon cheat sheet](https://github.com/UmbrellaCrow612/favicon-cheat-sheet)
 - [Used favicon](https://www.iconfinder.com/icons/291716/github_logo_social_network_social_icon)
 - [Darker color maker](https://pinetools.com/darken-color)
+- [Illustrations](https://pngtree.com/free-png-vectors/development)
 
 # How to push changes
 

@@ -73,7 +73,7 @@ const Home: NextPage = () => {
 
       {/** Second hero section */}
 
-      <div className="w-full px-10 h-[600px] flex items-center">
+      <div className="w-full bg-[#0b0d11] px-10 h-[600px] flex items-center">
         <section className="mx-auto  w-[700px] h-[400px] md:h-[300px] flex flex-col md:flex-row justify-between rounded-xl shadow-xl border-[0.5px] border-black bg-[#ffffff]">
           {/** Top */}
           <div className="py-2 px-3 text-xl font-extrabold text-center text-[#57616A]  md:w-[300px] md:flex md:flex-col md:items-center md:justify-center">
@@ -97,6 +97,28 @@ const Home: NextPage = () => {
           <div
             style={{ backgroundImage: 'url(/images/hero-banner-1.webp)' }}
             className="h-[150px] md:h-full bg-contain bg-center md:bg-left-bottom rounded-xl md:w-[55%] bg-no-repeat"
+          />
+        </section>
+      </div>
+
+      {/** Third hero section */}
+
+      <div className="w-full bg-[#0b0d11]">
+        <section className="grid grid-cols-1 grid-rows-2 p-1 mx-auto max-w-screen-2xl h-[700px] md:grid-cols-2 md:grid-rows-1">
+          {/*Grid 1*/}
+          <div className="p-1 text-center md:flex md:flex-col md:items-center md:justify-center">
+            <h6 className="text-4xl font-bold text-white md:text-5xl">Give your code a home in the cloud</h6>
+            <p className="mt-3 text-2xl text-white md:text-3xl">
+              Record or rewind any change to your code to keep you and your team in sync. Host it all for free with unlimited public and private repositories.
+            </p>
+            <button className="text-white border-[1.2px] border-gray-700 px-8 py-6 rounded-md shadow-xl mt-7 text-xl bg-[#2c2a2a]">
+              Sign up to GitHub
+            </button>
+          </div>
+          {/*Grid 2*/}
+          <div
+            className="bg-center bg-no-repeat bg-contain"
+            style={{ backgroundImage: 'url(/images/coding-1.png)' }}
           />
         </section>
       </div>
